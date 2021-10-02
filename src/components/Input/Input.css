@@ -1,0 +1,18 @@
+.input {
+ background-color: #f3f3f3;
+ border: none;
+ padding: 16px;
+ font-size: 13px;
+ margin-bottom: 20px;
+ width: 350px;
+ box-sizing: border-box;
+}
+
+::placeholder{
+ color:#c9c9c9;
+ 
+}
+
+.input:focus {
+ outline: none;
+}
