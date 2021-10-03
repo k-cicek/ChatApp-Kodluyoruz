@@ -7,9 +7,9 @@ import Input from "../../components/Input/Input";
 import { UserContext } from "../../context/login";
 
 export default function Login() {
-  const [username, setUsername] = useState("");
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
+  const [username, setUsername] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
 
   const { user, login } = useContext(UserContext);
   const { pathname } = useLocation();
@@ -31,7 +31,7 @@ export default function Login() {
       <h1 className="text-fix">Log in to your account</h1>
       <Input
         type="text"
-        placeHolder="User Name"
+        placeHolder="Username"
         onChange={(e) => {
           setUsername(e.target.value);
         }}
@@ -47,7 +47,7 @@ export default function Login() {
         type="text"
         placeHolder="Last Name"
         onChange={(e) => {
-          setLastName(e.target.value);
+        setLastName(e.target.value);
         }}
       />
       <Button onClick={handleSubmitLogin} text="LOGIN" />

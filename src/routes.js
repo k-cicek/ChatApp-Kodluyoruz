@@ -6,11 +6,11 @@ import {
   Switch,
   Route,
   useLocation,
+  useHistory,
 } from "react-router-dom";
 
-import useLogin from "./hooks/useLogin";
-import Login from "./pages/Login/Login";
-import Chat from "./pages/Chat/Chat";
+import Login from "./pages/Login";
+import Chat from "./pages/Chat";
 
 function Routes() {
 

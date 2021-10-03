@@ -1,6 +1,5 @@
-import React from "react";
-
-import { UserContext } from "../../../context/login";
+import React, { useContext } from "react";
+import { UserContext } from "../../../../context/login";
 
 export default function Messages() {
   const { selectedUser } = React.useContext(UserContext);
@@ -9,7 +8,7 @@ export default function Messages() {
     <div className="messages">
       {selectedUser
         ? selectedUser.messages.map((message) => {
-            return <div>{message.text}</div>;
+            return <div className="message">{message.text}</div>;
           })
         : null}
     </div>
