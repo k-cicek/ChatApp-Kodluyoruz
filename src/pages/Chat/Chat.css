@@ -20,14 +20,20 @@
  flex: 7; 
 
 }
+.search, .header {
+ border-left: 1px solid #e2e2e2;
+
+}
 
 .user_list, .messages {
  flex: 1;
  border-top: 1px solid #e2e2e2;
+
 }
 
 .settings, .message_from{
  border-top: 1px solid #e2e2e2;
+
 }
 
 .user-list{
@@ -41,6 +47,13 @@ align-items: center;
 
 .avatar{
  padding-right: 15px;
+ display: flex;
+ align-items: center;
+}
+
+.avatar > .MuiSvgIcon-root{
+ margin-right: -15px;
+
 }
 
 .header {
@@ -48,6 +61,7 @@ align-items: center;
  height: 85px;
  align-items: center;
  padding-left: 20px;
+ background-color: #f3f3f3;
 }
 
 .user-list:hover{
@@ -94,4 +108,12 @@ margin-right: 40px;}
  height: 47px;
  margin: 10px;
  background-color: #a7a5a5;
+}
+
+.message {
+ width: 550px;
+margin-top: 20px;
+ margin-left: 20px;
+ padding: 20px;
+ background-color: #f3f3f3
 }

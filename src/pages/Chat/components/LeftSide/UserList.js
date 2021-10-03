@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { UserContext } from "../../../../context/login";
-import { Avatar } from "@material-ui/core";
+import {Avatar} from "@material-ui/core"
+
 
 export default function UserList({ searchText }) {
   const { userList, setSelectedUser } = useContext(UserContext);
@@ -20,12 +21,7 @@ export default function UserList({ searchText }) {
             onClick={() => {
               setSelectedUser(user.id);
             }}
-          >
-            <div className="avatar">
-              <Avatar />
-            </div>
-            {`${user.first_name} ${user.last_name}`}
-          </div>
+          ><div className="avatar"><Avatar/></div>{`${user.first_name} ${user.last_name}`}</div>
         );
       })}
     </div>

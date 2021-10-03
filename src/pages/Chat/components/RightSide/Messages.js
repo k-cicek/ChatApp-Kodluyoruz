@@ -8,7 +8,7 @@ export default function Messages() {
     <div className="messages">
       {selectedUser
         ? selectedUser.messages.map((message) => {
-            return <div className="message">{message.text}</div>;
+            return <div className="message" >{message.text}</div>;
           })
         : null}
     </div>
