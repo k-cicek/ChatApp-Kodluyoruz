@@ -117,3 +117,8 @@ margin-top: 20px;
  padding: 20px;
  background-color: #f3f3f3
 }
+
+.avatar2 {
+ display: flex;
+padding-right: 100px;
+}

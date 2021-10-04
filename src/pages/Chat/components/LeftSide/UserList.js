@@ -21,7 +21,7 @@ export default function UserList({ searchText }) {
             onClick={() => {
               setSelectedUser(user.id);
             }}
-          ><div className="avatar"><Avatar/></div>{`${user.first_name} ${user.last_name}`}</div>
+          ><div className="avatar"><Avatar /></div>{`${user.first_name} ${user.last_name}`}</div>
         );
       })}
     </div>
