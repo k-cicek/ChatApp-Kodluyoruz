@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  HashRouter,
+  BrowserRouter as Router,
   Redirect,
   Link,
   Switch,
@@ -15,16 +15,16 @@ import Chat from "./pages/Chat";
 function Routes() {
 
   return (
-    <HashRouter>
+    <Router>
       <Switch>
+      <Route path="/login">
+          <Login />
+        </Route>
         <Route path="/chat">
           <Chat />
         </Route>
-        <Route path="/login">
-          <Login />
-        </Route>
       </Switch>
-    </HashRouter>
+    </Router>
   );
 }
 
