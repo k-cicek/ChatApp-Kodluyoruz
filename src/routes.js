@@ -11,6 +11,9 @@ import {
 
 import Login from "./pages/Login";
 import Chat from "./pages/Chat";
+import Search from "./pages/Chat/components/LeftSide/Search";
+import UserList from "./pages/Chat/components/LeftSide/UserList";
+import Settings from "./pages/Chat/components/LeftSide/Settings";
 
 function Routes() {
 

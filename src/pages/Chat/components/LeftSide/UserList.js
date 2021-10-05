@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { UserContext } from "../../../../context/login";
-import {Avatar} from "@material-ui/core"
-
+import { Avatar } from "@material-ui/core";
+import ThemeContext from "../../../../context/themContext";
 
 export default function UserList({ searchText }) {
   const { userList, setSelectedUser } = useContext(UserContext);
@@ -12,8 +12,11 @@ export default function UserList({ searchText }) {
       .includes(searchText.toLowerCase())
   );
 
+  const { theme } = useContext(ThemeContext);
+
+
   return (
-    <div className="user_list">
+    <div className="user_list" style={theme} >
       {filteredUserList.map((user) => {
         return (
           <div
@@ -21,7 +24,12 @@ export default function UserList({ searchText }) {
             onClick={() => {
               setSelectedUser(user.id);
             }}
-          ><div className="avatar"><Avatar /></div>{`${user.first_name} ${user.last_name}`}</div>
+          >
+            <div className="avatar">
+              <Avatar />
+            </div>
+            {`${user.first_name} ${user.last_name}`}
+          </div>
         );
       })}
     </div>
