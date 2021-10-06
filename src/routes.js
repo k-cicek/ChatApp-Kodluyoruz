@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  BrowserRouter as Router,
+  HashRouter,
   Redirect,
   Link,
   Switch,
@@ -11,11 +11,15 @@ import {
 
 import Login from "./pages/Login";
 import Chat from "./pages/Chat";
+import Search from "./pages/Chat/components/LeftSide/Search";
+import UserList from "./pages/Chat/components/LeftSide/UserList";
+import Settings from "./pages/Chat/components/LeftSide/Settings";
 
 function Routes() {
 
   return (
-    <Router>
+    <HashRouter>
+      <Redirect to="/login"/>
       <Switch>
       <Route path="/login">
           <Login />
@@ -24,7 +28,7 @@ function Routes() {
           <Chat />
         </Route>
       </Switch>
-    </Router>
+    </HashRouter>
   );
 }
 

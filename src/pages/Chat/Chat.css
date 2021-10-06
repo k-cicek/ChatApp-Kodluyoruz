@@ -2,6 +2,7 @@
  display: flex;
  flex-direction: row;
  height: 100vh;
+ width: 100%;
 }
 
 .left_side, .right_side {
@@ -42,7 +43,7 @@
  border: 1px solid #f3f3f3;
  background-color: white;
  cursor:pointer;
-align-items: center;
+ align-items: center;
 }
 
 .avatar{
@@ -62,6 +63,7 @@ align-items: center;
  align-items: center;
  padding-left: 20px;
  background-color: #f3f3f3;
+
 }
 
 .user-list:hover{
@@ -108,12 +110,49 @@ margin-right: 40px;}
  height: 47px;
  margin: 10px;
  background-color: #a7a5a5;
+ border: none;
+ color: white;
+ cursor: pointer;
+
 }
 
+
+.message-area {
+width: 100%;
+display: flex;
+justify-content: flex-start;
+
+}
+
+.message-area.user-me{
+justify-content: flex-end;
+}
+
+
+
 .message {
- width: 550px;
+ width: 475px;
 margin-top: 20px;
  margin-left: 20px;
  padding: 20px;
- background-color: #f3f3f3
+ background-color: #f3f3f3;
 }
+
+.header button {
+ width: 40px;
+}
+
+.button_icon {
+ border: none;
+ font-size: 20px;
+ margin-left: auto;
+ margin-right: 2rem;
+ cursor: pointer;
+}
+
+.button_icon:focus{
+ outline: none;
+ 
+}
+
+

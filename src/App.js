@@ -3,11 +3,13 @@ import { UserContext } from "./context/login";
 import Routes from "./routes";
 
 import mockUserList from "./mock-users.json";
+import ThemeContext, { themes } from "./context/themContext";
 
 function App() {
   const [user, setUser] = useState(null);
   const [selectedUser, setSelectedUser] = useState(null);
   const [userList, setUserList] = useState(mockUserList.users);
+  const [theme, setTheme] = useState(themes.dark);
 
   const login = (user) => {
     setUser(user);
@@ -25,7 +27,7 @@ function App() {
   };
 
   const handleSendNewMessage = (messageText) => {
-    setSelectedUser({
+    const newSelectedUser = {
       ...selectedUser,
       messages: [
         ...selectedUser.messages,
@@ -35,7 +37,17 @@ function App() {
           sender: user.id,
         },
       ],
+    };
+    setSelectedUser(newSelectedUser);
+    const newUserList = userList.map((u) => {
+      if (u.id === selectedUser.id) return newSelectedUser;
+      else return u;
     });
+    setUserList(newUserList);
+  };
+
+  const toggleTheme = () => {
+    theme === themes.dark ? setTheme(themes.light) : setTheme(themes.dark);
   };
 
   useEffect(() => {
@@ -49,19 +61,21 @@ function App() {
 
   return (
     <>
-      <UserContext.Provider
-        value={{
-          user,
-          selectedUser,
-          setSelectedUser: handleSetSelectedUser,
-          userList,
-          login,
-          logout,
-          handleSendNewMessage,
-        }}
-      >
-        <Routes />
-      </UserContext.Provider>
+      <ThemeContext.Provider value={{ theme, toggleTheme }}>
+        <UserContext.Provider
+          value={{
+            user,
+            selectedUser,
+            setSelectedUser: handleSetSelectedUser,
+            userList,
+            login,
+            logout,
+            handleSendNewMessage,
+          }}
+        >
+          <Routes />
+        </UserContext.Provider>
+      </ThemeContext.Provider>
     </>
   );
 }
