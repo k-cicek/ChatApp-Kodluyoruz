@@ -4,7 +4,7 @@ import { Avatar } from "@material-ui/core";
 import MoreHoriz from '@material-ui/icons/MoreHoriz';
 import ThemeContext from "../../../../context/themContext";
 
-export default function UserHeader() {
+export default function UserHeader(clicked, onClickHandler) {
   const { selectedUser } = React.useContext(UserContext);
   const { theme, toggleTheme } = useContext(ThemeContext);
 
@@ -17,9 +17,13 @@ export default function UserHeader() {
         <Avatar />
       </div>
       {`${selectedUser?.first_name} ${selectedUser?.last_name}`}
-      <div className="avatar2">
+      <button
+        onClick={onClickHandler}
+        style={theme}
+        className="button_icon"
+      >
         <MoreHoriz/>
-      </div>
+      </button>
     </div>
   );
 }

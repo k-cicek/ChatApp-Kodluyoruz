@@ -2,6 +2,7 @@
  display: flex;
  flex-direction: row;
  height: 100vh;
+ width: 100%;
 }
 
 .left_side, .right_side {
@@ -109,6 +110,10 @@ margin-right: 40px;}
  height: 47px;
  margin: 10px;
  background-color: #a7a5a5;
+ border: none;
+ color: white;
+ cursor: pointer;
+
 }
 
 
@@ -133,12 +138,21 @@ margin-top: 20px;
  background-color: #f3f3f3;
 }
 
-.avatar2 {
- display: flex;
-}
-
-
 .header button {
  width: 40px;
 }
+
+.button_icon {
+ border: none;
+ font-size: 20px;
+ margin-left: auto;
+ margin-right: 2rem;
+ cursor: pointer;
+}
+
+.button_icon:focus{
+ outline: none;
+ 
+}
+
 
