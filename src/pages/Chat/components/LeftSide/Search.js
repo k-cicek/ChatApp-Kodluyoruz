@@ -11,6 +11,7 @@ export default function Search({ searchText, handleOnChange }) {
         <Input
           placeHolder="Search"
           type="text"
+          style={theme}
           onChange={(e) => {
             handleOnChange(e.target.value);
           }}

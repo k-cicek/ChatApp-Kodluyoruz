@@ -3,7 +3,7 @@ import { UserContext } from "../../../../context/login";
 import { Avatar } from "@material-ui/core";
 import ThemeContext from "../../../../context/themContext";
 
-export default function UserList({ searchText }) {
+export default function UserList({ searchText="" }) {
   const { userList, setSelectedUser } = useContext(UserContext);
 
   const filteredUserList = userList.filter((u) =>

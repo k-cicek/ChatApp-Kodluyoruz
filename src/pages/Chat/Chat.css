@@ -8,6 +8,7 @@
 .left_side, .right_side {
  display: flex;
  flex-direction: column;
+ background-color: #e8e8e8;
 }
 
 .left_side {
@@ -40,16 +41,16 @@
 .user-list{
  display: flex;
  padding: 18px;
- border: 1px solid #f3f3f3;
- background-color: white;
+ border: 1px solid white;
+ background-color: #f3f3f3;
  cursor:pointer;
  align-items: center;
 }
 
 .avatar{
- padding-right: 15px;
+ padding-right: 35px;
  display: flex;
- align-items: center;
+ align-items: center; 
 }
 
 .avatar > .MuiSvgIcon-root{
@@ -63,7 +64,8 @@
  align-items: center;
  padding-left: 20px;
  background-color: #f3f3f3;
-
+ justify-content: space-between;
+ padding-right: 20px;
 }
 
 .user-list:hover{
@@ -155,4 +157,54 @@ margin-top: 20px;
  
 }
 
+.user_info{
+ max-height: 100%;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items:center ;
+ position: relative;
+}
+
+.user_info_user{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ margin-top: 120px;
+}
+
+.close-button{
+ position: absolute;
+ top :35px;
+ right: 100px;
+}
+
+.user_details {
+ display: flex;
+}
+
+.user_icon{
+ width: 200px;
+ height: 110px;
+ background-color: #a7a5a579;
+ margin-right: 24px;
+ color:#68B7FF;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ padding-top: 10px;
+}
+
+.user-info_user-name{
+ font-size: 18px;
+ font-weight: 600;
+ margin-bottom: 25px;
+ margin-top: 20px;
+}
+
+.moreicon {
+ color: black;
+}
 
